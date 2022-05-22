@@ -167,7 +167,7 @@ class _HomeFragmentState extends State<HomeFragment> with SingleTickerProviderSt
         ),
         drawer: Theme(
           data: Theme.of(context)
-              .copyWith(canvasColor: googleColor), // วาดสีลง theme
+              .copyWith(canvasColor: googleColor), // ใช้ theme ในการเทสีพื้นหลัง drawer
           child: Drawer(
             child: ListView(
               children: [

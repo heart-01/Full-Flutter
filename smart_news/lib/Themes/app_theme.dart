@@ -3,7 +3,7 @@ import 'package:smart_news/Themes/colors.dart';
 
 class AppTheme {
 
-  static final ThemeData lightTheme = ThemeData(
+  static final ThemeData lightTheme = ThemeData( // static final จะเป็นการเรียกใช้งาน function lightTheme โดยที่ไม่จำเป็นต้องสร้าง Object
     scaffoldBackgroundColor: white_color,
     primaryColor: primaryColor,
     errorColor: Colors.red,
