@@ -51,13 +51,13 @@ class _PrintQuickScreenState extends State<PrintQuickScreen> {
       
                 // Button
                 Padding(
-                  padding: const EdgeInsets.only(top: 25.0, bottom: 8.0),
+                  padding: const EdgeInsets.only(top: 35.0, bottom: 8.0),
                   child: ElevatedFullButton(
                     icon: Icons.settings_outlined,
                     iconColor: whiteColor,
                     iconSize: TEXT_SIZE_Normal,
                     name: 'กำหนดเครื่องพิมพ์ กดปุ่มนี้',
-                    fontSize: TEXT_SIZE_Medium,
+                    fontSize: TEXT_SIZE_LMedium,
                     height: 35,
                     textColor: whiteColor,
                     btnColor: primaryColor,

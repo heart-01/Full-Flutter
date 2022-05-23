@@ -13,12 +13,13 @@ const String VERSION_APP = 'v.1.0.0.18';
 const String TEXT_LOGOUT = 'ออก';
 
 // font sizes
-const TEXT_SIZE_XSSMALL = 10.0;
-const TEXT_SIZE_XSMALL = 11.0;
-const TEXT_SIZE_SMALL = 12.0;
+const TEXT_SIZE_XSmall = 10.0;
+const TEXT_SIZE_Small = 11.0;
+const TEXT_SIZE_LSmall = 12.0;
+const TEXT_SIZE_SXMedium = 13.0;
 const TEXT_SIZE_SMedium = 14.0;
-const TEXT_SIZE_SLMedium = 15.0;
-const TEXT_SIZE_Medium= 16.0;
+const TEXT_SIZE_Medium = 15.0;
+const TEXT_SIZE_LMedium= 16.0;
 const TEXT_SIZE_LargeMedium = 18.0;
 const TEXT_SIZE_Normal = 20.0;
 const TEXT_SIZE_LargeNormal = 22.0;

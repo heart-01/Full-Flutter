@@ -9,11 +9,11 @@ Widget dataPrintList(){
     columnSpacing: 20,
     // horizontalMargin: 20,
     columns: const [
-      DataColumn(label: Text('TYPE', style: TextStyle(fontWeight: FontWeight.bold, fontSize: TEXT_SIZE_SMALL))),
-      DataColumn(label: Text('BARCODE', style: TextStyle(fontWeight: FontWeight.bold, fontSize: TEXT_SIZE_SMALL))),
-      DataColumn(label: Text('CODE', style: TextStyle(fontWeight: FontWeight.bold, fontSize: TEXT_SIZE_SMALL))),
-      DataColumn(label: Text('Name', style: TextStyle(fontWeight: FontWeight.bold, fontSize: TEXT_SIZE_SMALL))),
-      DataColumn(label: Text('MD', style: TextStyle(fontWeight: FontWeight.bold, fontSize: TEXT_SIZE_SMALL)))
+      DataColumn(label: Text('TYPE', style: TextStyle(fontWeight: FontWeight.bold, fontSize: TEXT_SIZE_LSmall))),
+      DataColumn(label: Text('BARCODE', style: TextStyle(fontWeight: FontWeight.bold, fontSize: TEXT_SIZE_LSmall))),
+      DataColumn(label: Text('CODE', style: TextStyle(fontWeight: FontWeight.bold, fontSize: TEXT_SIZE_LSmall))),
+      DataColumn(label: Text('Name', style: TextStyle(fontWeight: FontWeight.bold, fontSize: TEXT_SIZE_LSmall))),
+      DataColumn(label: Text('MD', style: TextStyle(fontWeight: FontWeight.bold, fontSize: TEXT_SIZE_LSmall)))
     ],
     rows: List<DataRow>.generate(
           20,

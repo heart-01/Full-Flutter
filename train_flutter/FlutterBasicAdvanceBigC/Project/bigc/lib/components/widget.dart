@@ -25,7 +25,7 @@ Widget appBarTitle() {
       Text(
         APP_NAME,
         style: TextStyle(
-          fontSize: TEXT_SIZE_Medium,
+          fontSize: TEXT_SIZE_LMedium,
           fontWeight: FontWeight.bold,
         ),
       ),
@@ -37,7 +37,9 @@ Widget infoUpdate() {
   return Center(
     child: Column(
       children: [
+        const SizedBox(height: 30),
         const Text(VERSION_APP, style: TextStyle(fontSize: TEXT_SIZE_SMedium)),
+        const SizedBox(height: 10),
         SizedBox(
           width: 121,
           child: ElevatedFullButton(

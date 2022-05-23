@@ -2,7 +2,6 @@ import 'package:bigc/components/elevated_full_button.dart';
 import 'package:bigc/screens/tabbarprint/data_print_list.dart';
 import 'package:bigc/themes/colors.dart';
 import 'package:bigc/utils/constants.dart';
-import 'package:cross_scroll/cross_scroll.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -22,25 +21,14 @@ class _PrintListScreenState extends State<PrintListScreen> {
         children: [
           SizedBox(
             height: 300,
-            child: CrossScroll(
-              normalColor: const Color.fromARGB(255, 171, 171, 171),
-              verticalBar: const CrossScrollBar(
-                thumb: ScrollThumb.alwaysShow,
-                track: ScrollTrack.show,
-                thickness: 8,
-                hoverThickness: 8,
-              ),
-              horizontalBar: const CrossScrollBar(
-                thumb: ScrollThumb.alwaysShow,
-                track: ScrollTrack.show,
-                thickness: 8,
-                hoverThickness: 8,
-              ),
+            child: Scrollbar(
               child: SingleChildScrollView(
                 scrollDirection: Axis.vertical,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: dataPrintList(),
+                child: Scrollbar(
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: dataPrintList(),
+                  ),
                 ),
               ),
             ),
@@ -58,14 +46,14 @@ class _PrintListScreenState extends State<PrintListScreen> {
               height: 35,
               textColor: whiteColor,
               btnColor: primaryColor,
-              onPressed: () {
+              onPressed: (){
                 if (kDebugMode) {
                   print('Setting');
                 }
               },
             ),
           ),
-
+      
           // Button Group
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -79,10 +67,10 @@ class _PrintListScreenState extends State<PrintListScreen> {
                       name: 'พิมพ์',
                       icon: Icons.print_outlined,
                       iconColor: whiteColor,
-                      iconSize: TEXT_SIZE_LargeMedium,
+                      iconSize: TEXT_SIZE_Medium,
                       textColor: whiteColor,
                       btnColor: greenColor,
-                      onPressed: () {},
+                      onPressed: (){},
                       height: 30,
                       fontSize: TEXT_SIZE_SMedium,
                     ),
@@ -93,12 +81,12 @@ class _PrintListScreenState extends State<PrintListScreen> {
                     name: 'ลบข้อมูล',
                     icon: Icons.delete,
                     iconColor: whiteColor,
-                    iconSize: TEXT_SIZE_LargeMedium,
+                    iconSize: 15,
                     textColor: whiteColor,
                     btnColor: Colors.red,
-                    onPressed: () {},
+                    onPressed: (){},
                     height: 30,
-                    fontSize: TEXT_SIZE_SXMedium,
+                    fontSize: TEXT_SIZE_SMedium,
                   ),
                 ),
                 Expanded(
@@ -111,7 +99,7 @@ class _PrintListScreenState extends State<PrintListScreen> {
                       iconSize: TEXT_SIZE_LargeMedium,
                       textColor: whiteColor,
                       btnColor: Colors.grey,
-                      onPressed: () {},
+                      onPressed: (){},
                       height: 30,
                       fontSize: TEXT_SIZE_SMedium,
                     ),
@@ -119,7 +107,7 @@ class _PrintListScreenState extends State<PrintListScreen> {
                 ),
               ],
             ),
-          ),
+          ),          
         ],
       ),
     );

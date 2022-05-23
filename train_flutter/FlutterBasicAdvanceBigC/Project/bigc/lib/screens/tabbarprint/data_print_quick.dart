@@ -11,7 +11,7 @@ Widget dataPrintQuick({ required bool ckSF, required Function(bool?) onChangedSF
         children: const [
           Expanded(
               flex: 2,
-              child: Text("Bar:", style: TextStyle(fontSize: TEXT_SIZE_XSMALL))),
+              child: Text("Bar:", style: TextStyle(fontSize: TEXT_SIZE_Small))),
           Expanded(
             flex: 10,
             child: TextFieldCustom(
@@ -25,7 +25,7 @@ Widget dataPrintQuick({ required bool ckSF, required Function(bool?) onChangedSF
               borderColor: grayColor,
               borderWidth: 1,
               borderRadius: 5,
-              fontSize: TEXT_SIZE_XSMALL,
+              fontSize: TEXT_SIZE_Small,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -42,39 +42,42 @@ Widget dataPrintQuick({ required bool ckSF, required Function(bool?) onChangedSF
               borderColor: grayColor,
               borderWidth: 1,
               borderRadius: 5,
-              fontSize: TEXT_SIZE_XSMALL,
+              fontSize: TEXT_SIZE_Small,
             ),
           ),
         ],
       ),
 
-      Row(
-        children: const [
-          Expanded(flex: 2,child: Text("")),
-          Expanded(
-            flex: 20,
-            child: TextFieldCustom(
-              readOnly: true,
-              initialValue: 'BP เครื่องดื่มM-150.150CC..P.10',
-              textInputType: TextInputType.text,
-              obscureText: false,
-              autofocus: false,
-              size: 5,
-              bgColor: inputBgColor,
-              borderColor: grayColor,
-              borderWidth: 1,
-              borderRadius: 5,
-              fontSize: TEXT_SIZE_XSMALL,
+      Padding(
+        padding: const EdgeInsets.only(top: 2, bottom: 2),
+        child: Row(
+          children: const [
+            Expanded(flex: 2,child: Text("")),
+            Expanded(
+              flex: 20,
+              child: TextFieldCustom(
+                readOnly: true,
+                initialValue: 'BP เครื่องดื่มM-150.150CC..P.10',
+                textInputType: TextInputType.text,
+                obscureText: false,
+                autofocus: false,
+                size: 5,
+                bgColor: inputBgColor,
+                borderColor: grayColor,
+                borderWidth: 1,
+                borderRadius: 5,
+                fontSize: TEXT_SIZE_Small,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
 
       Row(
         children: const [
           Expanded(
               flex: 2,
-              child: Text("MD:", style: TextStyle(fontSize: TEXT_SIZE_XSMALL))),
+              child: Text("MD:", style: TextStyle(fontSize: TEXT_SIZE_Small))),
           Expanded(
             flex: 12,
             child: TextFieldCustom(
@@ -88,7 +91,7 @@ Widget dataPrintQuick({ required bool ckSF, required Function(bool?) onChangedSF
               borderColor: grayColor,
               borderWidth: 1,
               borderRadius: 5,
-              fontSize: TEXT_SIZE_XSMALL,
+              fontSize: TEXT_SIZE_Small,
             ),
           ),
           Expanded(
@@ -104,72 +107,75 @@ Widget dataPrintQuick({ required bool ckSF, required Function(bool?) onChangedSF
               borderColor: grayColor,
               borderWidth: 1,
               borderRadius: 5,
-              fontSize: TEXT_SIZE_XSMALL,
+              fontSize: TEXT_SIZE_Small,
             ),
           ),
         ],
+      ),
+
+      Padding(
+        padding: const EdgeInsets.only(top: 2, bottom: 2),
+        child: Row(
+          children: const [
+            Expanded(
+                flex: 2,
+                child: Text("ST:", style: TextStyle(fontSize: TEXT_SIZE_Small))),
+            Expanded(
+              flex: 6,
+              child: TextFieldCustom(
+                readOnly: true,
+                initialValue: 'A',
+                textInputType: TextInputType.text,
+                obscureText: false,
+                autofocus: false,
+                size: 5,
+                bgColor: inputBgColor,
+                borderColor: grayColor,
+                borderWidth: 1,
+                borderRadius: 5,
+                fontSize: TEXT_SIZE_Small,
+              ),
+            ),
+            Expanded(
+              flex: 8,
+              child: TextFieldCustom(
+                readOnly: true,
+                initialValue: 'POG210716',
+                textInputType: TextInputType.text,
+                obscureText: false,
+                autofocus: false,
+                size: 5,
+                bgColor: inputBgColor,
+                borderColor: grayColor,
+                borderWidth: 1,
+                borderRadius: 5,
+                fontSize: TEXT_SIZE_Small,
+              ),
+            ),
+            Expanded(
+              flex: 6,
+              child: TextFieldCustom(
+                readOnly: true,
+                textInputType: TextInputType.text,
+                obscureText: false,
+                autofocus: false,
+                size: 5,
+                bgColor: inputBgColor,
+                borderColor: grayColor,
+                borderWidth: 1,
+                borderRadius: 5,
+                fontSize: TEXT_SIZE_Small,
+              ),
+            ),
+          ],
+        ),
       ),
 
       Row(
         children: const [
           Expanded(
               flex: 2,
-              child: Text("ST:", style: TextStyle(fontSize: TEXT_SIZE_XSMALL))),
-          Expanded(
-            flex: 6,
-            child: TextFieldCustom(
-              readOnly: true,
-              initialValue: 'A',
-              textInputType: TextInputType.text,
-              obscureText: false,
-              autofocus: false,
-              size: 5,
-              bgColor: inputBgColor,
-              borderColor: grayColor,
-              borderWidth: 1,
-              borderRadius: 5,
-              fontSize: TEXT_SIZE_XSMALL,
-            ),
-          ),
-          Expanded(
-            flex: 8,
-            child: TextFieldCustom(
-              readOnly: true,
-              initialValue: 'POG210716',
-              textInputType: TextInputType.text,
-              obscureText: false,
-              autofocus: false,
-              size: 5,
-              bgColor: inputBgColor,
-              borderColor: grayColor,
-              borderWidth: 1,
-              borderRadius: 5,
-              fontSize: TEXT_SIZE_XSMALL,
-            ),
-          ),
-          Expanded(
-            flex: 6,
-            child: TextFieldCustom(
-              readOnly: true,
-              textInputType: TextInputType.text,
-              obscureText: false,
-              autofocus: false,
-              size: 5,
-              bgColor: inputBgColor,
-              borderColor: grayColor,
-              borderWidth: 1,
-              borderRadius: 5,
-              fontSize: TEXT_SIZE_XSMALL,
-            ),
-          ),
-        ],
-      ),
-
-      Row(
-        children: const [
-          Expanded(
-              flex: 2,
-              child: Text("SP:", style: TextStyle(fontSize: TEXT_SIZE_XSMALL))),
+              child: Text("SP:", style: TextStyle(fontSize: TEXT_SIZE_Small))),
           Expanded(
             flex: 9,
             child: TextFieldCustom(
@@ -183,14 +189,14 @@ Widget dataPrintQuick({ required bool ckSF, required Function(bool?) onChangedSF
               borderColor: grayColor,
               borderWidth: 1,
               borderRadius: 5,
-              fontSize: TEXT_SIZE_XSMALL,
+              fontSize: TEXT_SIZE_Small,
             ),
           ),
           Expanded(
               flex: 2,
               child: Padding(
                 padding: EdgeInsets.only(left: 2),
-                child: Text("NP:", style: TextStyle(fontSize: TEXT_SIZE_XSMALL)),
+                child: Text("NP:", style: TextStyle(fontSize: TEXT_SIZE_Small)),
               )),
           Expanded(
             flex: 9,
@@ -205,64 +211,67 @@ Widget dataPrintQuick({ required bool ckSF, required Function(bool?) onChangedSF
               borderColor: grayColor,
               borderWidth: 1,
               borderRadius: 5,
-              fontSize: TEXT_SIZE_XSMALL,
+              fontSize: TEXT_SIZE_Small,
             ),
           ),
         ],
       ),
 
-      Row(
-        children: const [
-          Expanded(
-              flex: 2,
-              child: Text("BOH:", style: TextStyle(fontSize: TEXT_SIZE_XSSMALL))),
-          Expanded(
-            flex: 9,
-            child: TextFieldCustom(
-              readOnly: true,
-              initialValue: '-2785',
-              textInputType: TextInputType.text,
-              obscureText: false,
-              autofocus: false,
-              size: 5,
-              bgColor: btnLogoutColor,
-              borderColor: grayColor,
-              borderWidth: 1,
-              borderRadius: 5,
-              fontSize: TEXT_SIZE_XSMALL,
-              fontColor: whiteColor,
+      Padding(
+        padding: const EdgeInsets.only(top: 2, bottom: 2),
+        child: Row(
+          children: const [
+            Expanded(
+                flex: 2,
+                child: Text("BOH:", style: TextStyle(fontSize: TEXT_SIZE_XSmall))),
+            Expanded(
+              flex: 9,
+              child: TextFieldCustom(
+                readOnly: true,
+                initialValue: '-2785',
+                textInputType: TextInputType.text,
+                obscureText: false,
+                autofocus: false,
+                size: 5,
+                bgColor: btnLogoutColor,
+                borderColor: grayColor,
+                borderWidth: 1,
+                borderRadius: 5,
+                fontSize: TEXT_SIZE_Small,
+                fontColor: whiteColor,
+              ),
             ),
-          ),
-          Expanded(
-              flex: 2,
-              child: Padding(
-                padding: EdgeInsets.only(left: 2),
-                child: Text("BOD:", style: TextStyle(fontSize: TEXT_SIZE_XSSMALL)),
-              )),
-          Expanded(
-            flex: 9,
-            child: TextFieldCustom(
-              readOnly: true,
-              initialValue: '470',
-              textInputType: TextInputType.text,
-              obscureText: false,
-              autofocus: false,
-              size: 5,
-              bgColor: inputBgColor,
-              borderColor: grayColor,
-              borderWidth: 1,
-              borderRadius: 5,
-              fontSize: TEXT_SIZE_XSMALL,
+            Expanded(
+                flex: 2,
+                child: Padding(
+                  padding: EdgeInsets.only(left: 2),
+                  child: Text("BOD:", style: TextStyle(fontSize: TEXT_SIZE_XSmall)),
+                )),
+            Expanded(
+              flex: 9,
+              child: TextFieldCustom(
+                readOnly: true,
+                initialValue: '470',
+                textInputType: TextInputType.text,
+                obscureText: false,
+                autofocus: false,
+                size: 5,
+                bgColor: inputBgColor,
+                borderColor: grayColor,
+                borderWidth: 1,
+                borderRadius: 5,
+                fontSize: TEXT_SIZE_Small,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
 
       Row(
         children: [
           const Expanded(
               flex: 2,
-              child: Text("PZ:", style: TextStyle(fontSize: TEXT_SIZE_XSMALL))),
+              child: Text("PZ:", style: TextStyle(fontSize: TEXT_SIZE_Small))),
           const Expanded(
             flex: 9,
             child: TextFieldCustom(
@@ -275,14 +284,14 @@ Widget dataPrintQuick({ required bool ckSF, required Function(bool?) onChangedSF
               borderColor: grayColor,
               borderWidth: 1,
               borderRadius: 5,
-              fontSize: TEXT_SIZE_XSMALL,
+              fontSize: TEXT_SIZE_Small,
             ),
           ),
           const Expanded(
               flex: 2,
               child: Padding(
                 padding: EdgeInsets.only(left: 2),
-                child: Text("P1:", style: TextStyle(fontSize: TEXT_SIZE_XSMALL)),
+                child: Text("P1:", style: TextStyle(fontSize: TEXT_SIZE_Small)),
               )),
           const Expanded(
             flex: 5,
@@ -297,14 +306,14 @@ Widget dataPrintQuick({ required bool ckSF, required Function(bool?) onChangedSF
               borderColor: grayColor,
               borderWidth: 1,
               borderRadius: 5,
-              fontSize: TEXT_SIZE_XSMALL,
+              fontSize: TEXT_SIZE_Small,
             ),
           ),
           Expanded(
             flex: 4,
             child: CheckboxCustom(
               name: 'SF',
-              fontSize: TEXT_SIZE_XSMALL,
+              fontSize: TEXT_SIZE_Small,
               borderRadius: 5,
               val: ckSF,
               onChanged: onChangedSF,
@@ -313,38 +322,41 @@ Widget dataPrintQuick({ required bool ckSF, required Function(bool?) onChangedSF
         ],
       ),
 
-      Row(
-        children: [
-          const Expanded(
-              flex: 4,
-              child: Text("บาร์ล่าสุด:", style: TextStyle(fontSize: TEXT_SIZE_XSSMALL))),
-          const Expanded(
-            flex: 14,
-            child: TextFieldCustom(
-              readOnly: true,
-              initialValue: '8851123212021',
-              textInputType: TextInputType.text,
-              obscureText: false,
-              autofocus: false,
-              size: 5,
-              bgColor: inputBgColor,
-              borderColor: grayColor,
-              borderWidth: 1,
-              borderRadius: 5,
-              fontSize: TEXT_SIZE_XSMALL,
+      Padding(
+        padding: const EdgeInsets.only(top: 2, bottom: 2),
+        child: Row(
+          children: [
+            const Expanded(
+                flex: 4,
+                child: Text("บาร์ล่าสุด:", style: TextStyle(fontSize: TEXT_SIZE_XSmall))),
+            const Expanded(
+              flex: 14,
+              child: TextFieldCustom(
+                readOnly: true,
+                initialValue: '8851123212021',
+                textInputType: TextInputType.text,
+                obscureText: false,
+                autofocus: false,
+                size: 5,
+                bgColor: inputBgColor,
+                borderColor: grayColor,
+                borderWidth: 1,
+                borderRadius: 5,
+                fontSize: TEXT_SIZE_Small,
+              ),
             ),
-          ),
-          Expanded(
-            flex: 4,
-            child: CheckboxCustom(
-              name: 'B/S',
-              fontSize: TEXT_SIZE_XSMALL,
-              borderRadius: 5,
-              val: ckBS,
-              onChanged: onChangedBS,
+            Expanded(
+              flex: 4,
+              child: CheckboxCustom(
+                name: 'B/S',
+                fontSize: TEXT_SIZE_Small,
+                borderRadius: 5,
+                val: ckBS,
+                onChanged: onChangedBS,
+              )
             )
-          )
-        ],
+          ],
+        ),
       )
 
     ],

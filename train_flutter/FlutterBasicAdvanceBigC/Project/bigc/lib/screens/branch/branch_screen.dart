@@ -47,7 +47,7 @@ class _BranchScreenState extends State<BranchScreen> {
                       defaultVerticalAlignment: TableCellVerticalAlignment.middle,
                       children: [
                         TableRow(children: [
-                          const Text("เลขที่สาขา", style: TextStyle(fontSize: TEXT_SIZE_SMALL)),
+                          const Text("เลขที่สาขา", style: TextStyle(fontSize: TEXT_SIZE_LSmall)),
                           Padding(
                             padding: const EdgeInsets.only(right: 10, bottom: 3),
                             child: TextFieldCustom(
@@ -62,14 +62,14 @@ class _BranchScreenState extends State<BranchScreen> {
                               borderColor: inputBgColor,
                               borderWidth: 1,
                               borderRadius: 10.0,
-                              fontSize: TEXT_SIZE_SMALL,
+                              fontSize: TEXT_SIZE_LSmall,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                         ]),
 
                         TableRow(children: [
-                          const Text("ชื่อสาขา", style: TextStyle(fontSize: TEXT_SIZE_SMALL)),
+                          const Text("ชื่อสาขา", style: TextStyle(fontSize: TEXT_SIZE_LSmall)),
                           Padding(
                             padding: const EdgeInsets.only(right: 10, bottom: 3),
                             child: TextFieldCustom(
@@ -84,14 +84,14 @@ class _BranchScreenState extends State<BranchScreen> {
                               borderColor: inputBgColor,
                               borderWidth: 0,
                               borderRadius: 10.0,
-                              fontSize: TEXT_SIZE_SMALL,
+                              fontSize: TEXT_SIZE_LSmall,
                               fontWeight: FontWeight.bold,
                             ),
                           )
                         ]),
 
                         TableRow(children: [
-                          const Text("ไอพี", style: TextStyle(fontSize: TEXT_SIZE_SMALL)),
+                          const Text("ไอพี", style: TextStyle(fontSize: TEXT_SIZE_LSmall)),
                           Padding(
                             padding: const EdgeInsets.only(right: 10, bottom: 3),
                             child: TextFieldCustom(
@@ -106,14 +106,14 @@ class _BranchScreenState extends State<BranchScreen> {
                               borderColor: inputBgColor,
                               borderWidth: 0,
                               borderRadius: 10.0,
-                              fontSize: TEXT_SIZE_SMALL,
+                              fontSize: TEXT_SIZE_LSmall,
                               fontWeight: FontWeight.bold,
                             ),
                           )
                         ]),
 
                         TableRow(children: [
-                          const Text("ชื่อเครื่อง", style: TextStyle(fontSize: TEXT_SIZE_SMALL)),
+                          const Text("ชื่อเครื่อง", style: TextStyle(fontSize: TEXT_SIZE_LSmall)),
                           Padding(
                             padding: const EdgeInsets.only(right: 10),
                             child: TextFieldCustom(
@@ -128,7 +128,7 @@ class _BranchScreenState extends State<BranchScreen> {
                               borderColor: inputBgColor,
                               borderWidth: 0,
                               borderRadius: 10.0,
-                              fontSize: TEXT_SIZE_SMALL,
+                              fontSize: TEXT_SIZE_LSmall,
                               fontWeight: FontWeight.bold,
                             ),
                           )
@@ -143,7 +143,7 @@ class _BranchScreenState extends State<BranchScreen> {
                         const EdgeInsets.only(left: 20, right: 20, bottom: 20),
                     child: ElevatedFullButton(
                       name: 'Print P1 Label',
-                      fontSize: TEXT_SIZE_Medium,
+                      fontSize: TEXT_SIZE_LMedium,
                       height: 35,
                       textColor: whiteColor,
                       btnColor: primaryColor,
