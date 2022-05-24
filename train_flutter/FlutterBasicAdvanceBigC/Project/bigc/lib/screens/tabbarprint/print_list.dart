@@ -21,7 +21,7 @@ class _PrintListScreenState extends State<PrintListScreen> {
       child: Column(
         children: [
           SizedBox(
-            height: 300,
+            height: 280,
             child: CrossScroll(
               normalColor: const Color.fromARGB(255, 171, 171, 171),
               verticalBar: const CrossScrollBar(
@@ -48,7 +48,7 @@ class _PrintListScreenState extends State<PrintListScreen> {
 
           // Button
           Padding(
-            padding: const EdgeInsets.only(top: 25.0, left: 8.0, right: 8.0),
+            padding: const EdgeInsets.only(top: 10.0, left: 8.0, right: 8.0),
             child: ElevatedFullButton(
               icon: Icons.settings_outlined,
               iconColor: whiteColor,

@@ -1,0 +1,36 @@
+name: p1label
+description: A new Flutter project.
+version: 1.0.0
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2 # สำหรับ Icon บน iOS
+  shared_preferences: ^2.0.15 # สำหรับเก็บข้อมูล local storage บน android/ios
+  audioplayers: ^0.20.1 # ปลั๊กอิน Flutter เพื่อเล่นไฟล์เสียงหลายไฟล์พร้อมกัน
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0 # เช็ค standart dart coding
+
+flutter:
+
+  uses-material-design: true
+  assets:
+    - assets/images/appicon/
+    - assets/images/bg/
+    - assets/images/logo/
+    - assets/audio/
+
+  fonts:
+    - family: IBMPlexSansThaiLooped
+      fonts:
+        - asset: fonts/IBMPlexSansThaiLooped-Thin.ttf # Thin 100
+        - asset: fonts/IBMPlexSansThaiLooped-ExtraLight.ttf # ExtraLight 200
+        - asset: fonts/IBMPlexSansThaiLooped-Light.ttf # Light 300
+        - asset: fonts/IBMPlexSansThaiLooped-Regular.ttf # Regular 400
+        - asset: fonts/IBMPlexSansThaiLooped-Medium.ttf # Medium 500

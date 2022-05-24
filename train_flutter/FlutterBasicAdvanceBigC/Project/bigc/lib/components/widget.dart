@@ -37,7 +37,7 @@ Widget infoUpdate() {
   return Center(
     child: Column(
       children: [
-        const SizedBox(height: 30),
+        const SizedBox(height: 5),
         const Text(VERSION_APP, style: TextStyle(fontSize: TEXT_SIZE_SMedium)),
         const SizedBox(height: 10),
         SizedBox(

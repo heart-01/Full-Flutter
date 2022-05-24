@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 Widget dataPrintList(){
   return DataTable(
     headingRowColor: MaterialStateColor.resolveWith((states) => btnBgVerColor),
-    dataRowHeight: 40,
-    columnSpacing: 20,
+    dataRowHeight: 30,
+    columnSpacing: 30,
     // horizontalMargin: 20,
     columns: const [
       DataColumn(label: Text('TYPE', style: TextStyle(fontWeight: FontWeight.bold, fontSize: TEXT_SIZE_LSmall))),

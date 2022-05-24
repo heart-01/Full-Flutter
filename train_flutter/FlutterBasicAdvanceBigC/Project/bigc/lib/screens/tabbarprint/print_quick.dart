@@ -51,7 +51,7 @@ class _PrintQuickScreenState extends State<PrintQuickScreen> {
       
                 // Button
                 Padding(
-                  padding: const EdgeInsets.only(top: 35.0, bottom: 8.0),
+                  padding: const EdgeInsets.only(top: 15.0, bottom: 8.0),
                   child: ElevatedFullButton(
                     icon: Icons.settings_outlined,
                     iconColor: whiteColor,
