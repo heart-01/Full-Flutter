@@ -1,25 +1,41 @@
+// ignore_for_file: unrelated_type_equality_checks
+
 import 'package:flutter/material.dart';
 import 'package:p1label/components/checkbox_custom.dart';
 import 'package:p1label/components/textfield_custom.dart';
 import 'package:p1label/themes/colors.dart';
 import 'package:p1label/utils/constants.dart';
 
-Widget dataPrintQuick({ required bool ckSF, required Function(bool?) onChangedSF, required bool ckBS, required Function(bool?) onChangedBS }) {
+void scanProduct(barcode, key) async {
+  print(barcode);
+}
+
+Widget dataPrintQuick({ 
+    // Parameter 
+    // required Key key,
+    required bool ckSF, 
+    required Function(bool?) onChangedSF, 
+    required bool ckBS, 
+    required Function(bool?) onChangedBS ,
+    required List productList,
+  }) {
+
   return Column(
     children: [
       Row(
-        children: const [
-          Expanded(
+        children: [
+          const Expanded(
               flex: 2,
               child: Text("Bar:", style: TextStyle(fontSize: TEXT_SIZE_XSMALL))),
           Expanded(
             flex: 10,
             child: TextFieldCustom(
               readOnly: false,
-              initialValue: '8851123212021',
+              initialValue: (productList[0] == "notFound") ? "" : productList[0]["barcode"],
+              maxLength: 13,
               textInputType: TextInputType.number,
               obscureText: false,
-              autofocus: false,
+              autofocus: true,
               size: 6,
               bgColor: white_color,
               borderColor: darker_GrayColor,
@@ -27,13 +43,16 @@ Widget dataPrintQuick({ required bool ckSF, required Function(bool?) onChangedSF
               borderRadius: 5,
               fontSize: TEXT_SIZE_XSMALL,
               fontWeight: FontWeight.bold,
+              onFieldSubmitted:(val){
+                // scanProduct(val, key);
+              }
             ),
           ),
           Expanded(
             flex: 10,
             child: TextFieldCustom(
               readOnly: true,
-              initialValue: '100572653 SO',
+              initialValue: (productList[0] == "notFound") ? "" : productList[0]["rootcode"],
               textInputType: TextInputType.text,
               obscureText: false,
               autofocus: false,

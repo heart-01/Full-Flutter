@@ -78,7 +78,7 @@ class CallAPI {
     return (response.body != null) ? productsModelFromJson(response.body) : null ;
   }
 
-  // Add New Product รับค่าเป็น List array data return bool
+  // Add New Product รับค่าเป็น List array data model ที่ถูกส่งเข้ามา return bool
   Future<bool> createProduct(ProductsModel data) async {
     final response = await http.post(
       Uri.parse(constant.baseAPIURL+'products'),
@@ -91,6 +91,27 @@ class CallAPI {
     }else{
       return false;
     }
+  }
+
+  // Update Product รับค่าเป็น List array data model ที่ถูกส่งเข้ามา return bool
+  Future<bool> updateProduct(ProductsModel data) async {
+    final response = await http.put(
+      Uri.parse(constant.baseAPIURL+'products/${data.id}'),
+      headers: _setHeaders(),
+      body: productModelToJson(data),
+    );
+
+    return (response.statusCode == 200) ? true :false;
+  }
+
+  // Delete Product
+  Future<bool> deleteProduct(String id) async {
+    final response = await http.delete(
+      Uri.parse(constant.baseAPIURL+"products/$id"),
+      headers: _setHeaders(),
+    );
+
+    return (response.statusCode == 200) ? true :false;
   }
 
 }

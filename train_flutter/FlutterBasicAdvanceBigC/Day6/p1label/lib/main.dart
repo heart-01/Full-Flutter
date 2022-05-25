@@ -8,7 +8,8 @@ var initURL;
 
 void main() {
 
-  initURL = '/branchcode';
+  // initURL = '/branchcode';
+  initURL = '/print-screen';
 
   runApp(MyApp());
 

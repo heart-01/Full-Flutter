@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_scale/screens/addproduct/addproduct_screen.dart';
 import 'package:flutter_scale/screens/dashboard/dashboard_screen.dart';
+import 'package:flutter_scale/screens/editproduct/editproduct_screen.dart';
 import 'package:flutter_scale/screens/login/login_screen.dart';
 import 'package:flutter_scale/screens/newsdetail/news_detail.dart';
 import 'package:flutter_scale/screens/register/register_screen.dart';
@@ -12,6 +13,7 @@ Map<String, WidgetBuilder> routes = {
   '/login': (BuildContext context) => const LoginScreen(),
   '/register': (BuildContext context) => const RegisterScreen(),
   '/dashboard': (BuildContext context) => const DashboardScreen(),
-  '/newsdetail': (BuildContext context) => NewsDetailScreen(),
+  '/newsdetail': (BuildContext context) => const NewsDetailScreen(),
   '/addproduct': (BuildContext context) => const AddProductScreen(),
+  '/editproduct': (BuildContext context) => const EditProductScreen(),
 };

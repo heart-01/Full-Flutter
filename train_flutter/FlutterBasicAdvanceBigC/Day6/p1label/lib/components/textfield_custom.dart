@@ -3,14 +3,16 @@
 import 'package:flutter/material.dart';
 
 class TextFieldCustom extends StatelessWidget {
-  final BuildContext? context;       // context
+  final BuildContext? context;      // context
   final TextInputType textInputType;// type input keyboard
+  final int? maxLength;             // maxLength
   final bool obscureText;           // hide data
   final bool autofocus;             // auto focus
   final bool readOnly;              // readOnly data
   final String? initialValue;       // initial data
   final Function? onValidate;       // validate data
   final Function? onSaved;          // onSaved data
+  final Function? onFieldSubmitted; // onFieldSubmit
   final double size;                // size text box
   final Color bgColor;              // bg Color
   final Color borderColor;          // border Color
@@ -27,8 +29,10 @@ class TextFieldCustom extends StatelessWidget {
     required this.obscureText,
     required this.autofocus,
     this.initialValue,
+    this.maxLength,
     this.onValidate,
     this.onSaved,
+    this.onFieldSubmitted,
     required this.size,
     required this.bgColor,
     required this.borderColor, 
@@ -47,7 +51,9 @@ class TextFieldCustom extends StatelessWidget {
       child: TextFormField(
         style: TextStyle(fontSize: fontSize, fontWeight: fontWeight, color: fontColor),
         readOnly: readOnly,
-        initialValue: initialValue,
+        // initialValue: initialValue,
+        controller: TextEditingController(text: initialValue),
+        maxLength: maxLength,
         obscureText: obscureText,
         autofocus: autofocus,
         validator: (value) {
@@ -56,8 +62,13 @@ class TextFieldCustom extends StatelessWidget {
         onSaved: (value) {
           return onSaved!(value);
         },
+        onFieldSubmitted: (value) {
+          return onFieldSubmitted!(value);
+        },
         keyboardType: textInputType,
         decoration: InputDecoration(
+          counterStyle: const TextStyle(height: double.minPositive),
+          counterText: "",
           filled: true,
           fillColor: bgColor,
           enabledBorder: OutlineInputBorder(

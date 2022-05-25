@@ -25,6 +25,7 @@ flutter:
     - assets/images/appicon/
     - assets/images/bg/
     - assets/images/logo/
+    - assets/data/
     - assets/audio/
 
   fonts:

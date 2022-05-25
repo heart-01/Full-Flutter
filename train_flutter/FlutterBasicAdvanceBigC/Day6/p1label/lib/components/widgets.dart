@@ -145,3 +145,79 @@ Widget btnLogout(BuildContext context) {
     ],
   );
 }
+
+Widget inputFieldWidget(
+  BuildContext context,
+  Icon icon,
+  String keyName,
+  String hintText,
+  Function onValidate,
+  Function onSaved,
+  Function onFieldSubmitted,
+  {
+    String initialValue = "",
+    bool autofocus = false,
+    bool obscureText = false,
+    Widget? suffixIcon,
+    var keyboardType = TextInputType.text
+  }) {
+    return TextFormField(
+      autofocus: autofocus,
+      initialValue: initialValue,
+      key: Key(keyName),
+      obscureText: obscureText,
+      validator: (val) {
+        return onValidate(val);
+      },
+      onSaved: (val) async {
+        return onSaved(val.toString().trim());
+      },
+      onFieldSubmitted: (val) async {   // เมื่อ Field นี้ถูกกด Submit
+        return onFieldSubmitted(val.toString().trim());
+      },
+      style: TextStyle(
+        fontSize: 18.0,
+      ),
+      cursorColor: textColorPrimary,
+      keyboardType: keyboardType,
+      decoration: InputDecoration(
+          hintText: hintText,
+          hintStyle: TextStyle(fontSize: 14.0, color: textColorSecondary),
+          contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+          errorStyle: TextStyle(fontSize: 16),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10.0),
+            borderSide: BorderSide(color: blueColor, width: 1),
+          ),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10.0),
+            borderSide: BorderSide(color: blueColor, width: 1),
+          ),
+          suffixIcon: suffixIcon,
+          prefixIcon: Padding(
+            padding: EdgeInsets.only(left: 10.0, right: 10.0),
+            child:
+            IconTheme(data: IconThemeData(color: blueColor), child: icon),
+      )),
+    );
+  }
+
+Widget submitButton(
+    String buttonText,
+    Function() onPress, {
+    String? color,
+    String? textColor,
+    bool? fullWidth,
+  }) {
+    return SizedBox(
+      width: double.infinity,
+      height: 40,
+      child: ElevatedButton(
+        child: Text(
+          buttonText,
+          style: TextStyle(fontSize: 18),
+        ),
+        onPressed: onPress,
+      ),
+    );
+  }

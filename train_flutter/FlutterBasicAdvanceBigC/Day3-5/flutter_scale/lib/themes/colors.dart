@@ -10,3 +10,5 @@ const primaryTextColor = Color(0xFF000000);
 const secondaryTextColor = Color(0xFFffffff);
 const inputTextColor = Color(0xFFcccccc);
 const logoutBtnColor = Color.fromARGB(255, 229, 72, 72);
+const blueColor = Color(0xFF323642);
+const textColorSecondary = Color(0xFF616161);

@@ -1,10 +1,9 @@
 // ignore_for_file: avoid_unnecessary_containers, sized_box_for_whitespace, prefer_const_constructors, prefer_const_constructors_in_immutables, prefer_const_literals_to_create_immutables, avoid_print
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:p1label/components/IAppBar.dart';
-import 'package:p1label/components/form_helper.dart';
 import 'package:p1label/components/widgets.dart';
-import 'package:p1label/themes/colors.dart';
 
 class BranchCodeScreen extends StatefulWidget {
   BranchCodeScreen({Key? key}) : super(key: key);
@@ -21,8 +20,18 @@ class _BranchCodeScreenState extends State<BranchCodeScreen> {
   // สร้างตัวแปรไว้รับค่าจากฟอร์ม
   late String _branchcode;
 
+  // สร้างฟังชั่นการ submitBranch
+  submitBranch() {
+    if (formKey.currentState!.validate()) {
+      formKey.currentState!.save();
+      print(_branchcode);
+      Navigator.pushReplacementNamed(context, '/home');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: IAppBar(
         height: 35,
@@ -55,33 +64,32 @@ class _BranchCodeScreenState extends State<BranchCodeScreen> {
                               SizedBox(
                                 height: 5,
                               ),
-                              FormHelper.inputFieldWidget(
-                                  context,
-                                  const Icon(Icons.store_outlined),
-                                  "branchcode",
-                                  "ป้อนรหัสสาขา 5 หลัก", (onValidateVal) {
-                                if (onValidateVal.isEmpty) {
-                                  return 'ป้อนรหัสสาขาก่อน';
-                                }else if(onValidateVal.length < 5){
-                                  return 'รหัสสาขาต้องไม่น้อยกว่า 5 ตัวอักษร';
-                                }
-                                return null;
-                              }, (onSavedVal) {
-                                _branchcode = onSavedVal;
-                              },
-                                  keyboardType: TextInputType.number),
+                              inputFieldWidget(
+                                context,
+                                const Icon(Icons.store_outlined),
+                                "branchcode",
+                                "ป้อนรหัสสาขา 5 หลัก", 
+                                (onValidateVal) {
+                                  if (onValidateVal.isEmpty) {
+                                    return 'ป้อนรหัสสาขาก่อน';
+                                  }else if(onValidateVal.length < 5){
+                                    return 'รหัสสาขาต้องไม่น้อยกว่า 5 ตัวอักษร';
+                                  }
+                                  return null;
+                                }, 
+                                (onSavedVal) {
+                                  _branchcode = onSavedVal;
+                                }, 
+                                (onFieldSubmittedVal){   // เมื่อ Field นี้ถูกกด Submit
+                                  submitBranch();
+                                },
+                                keyboardType: TextInputType.number,
+                              ),
                               const SizedBox(
                                 height: 10,
                               ),
-                              FormHelper.submitButton("ตกลง", () async {
-
-                                if (formKey.currentState!.validate()) {
-                                  formKey.currentState!.save();
-                                  print(_branchcode);
-
-                                  Navigator.pushReplacementNamed(context, '/home');
-                                }
-
+                              submitButton("ตกลง", () async {
+                                submitBranch();
                               }),
                             ],
                           ),
