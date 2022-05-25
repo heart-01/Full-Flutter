@@ -11,6 +11,7 @@ dependencies:
   cupertino_icons: ^1.0.2 # สำหรับ Icon บน iOS
   shared_preferences: ^2.0.15 # สำหรับเก็บข้อมูล local storage บน android/ios
   audioplayers: ^0.20.1 # ปลั๊กอิน Flutter เพื่อเล่นไฟล์เสียงหลายไฟล์พร้อมกัน
+  cross_scroll: ^0.0.75 
 
 dev_dependencies:
   flutter_test:

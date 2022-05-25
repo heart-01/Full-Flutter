@@ -1,3 +1,4 @@
+import 'package:cross_scroll/cross_scroll.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:p1label/components/elevated_full_button.dart';
@@ -21,14 +22,25 @@ class _PrintListScreenState extends State<PrintListScreen> {
         children: [
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.6,
-            child: Scrollbar(
+            child: CrossScroll(
+              normalColor: const Color.fromARGB(255, 171, 171, 171),
+              verticalBar: const CrossScrollBar(
+                thumb: ScrollThumb.alwaysShow,
+                track: ScrollTrack.show,
+                thickness: 8,
+                hoverThickness: 8,
+              ),
+              horizontalBar: const CrossScrollBar(
+                thumb: ScrollThumb.alwaysShow,
+                track: ScrollTrack.show,
+                thickness: 8,
+                hoverThickness: 8,
+              ),
               child: SingleChildScrollView(
                 scrollDirection: Axis.vertical,
-                child: Scrollbar(
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: dataPrintList(),
-                  ),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: dataPrintList(),
                 ),
               ),
             ),
