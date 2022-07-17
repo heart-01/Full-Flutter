@@ -1,0 +1,12 @@
+{
+    "title": "Title",
+    "app_title": "Print P1 Label",
+    "hello": "Hello, How are you?",
+    "changelang": "Select language",
+    "textlabel_branchcode":"Please enter the branch code",
+    "error_branchtext":"Enter the 5-digit branch code",
+    "error_emptybranch":"Enter the branch code first",
+    "error_branchtextlength":"Branch code must be at least 5 characters long",
+    "button_branch_submit":"OK",
+    "checkupdate_button": "Check for Update"
+}

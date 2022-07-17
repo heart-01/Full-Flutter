@@ -1,0 +1,3 @@
+arb-dir: lib/l10n
+template-arb-file: app_en.arb # app_en.arb //template เริ่มต้นของ app จะให้อ่านไฟล์ app_en.arb ในโฟเดอร์ lib/l10n
+output-localization-file: app_localizations.dart

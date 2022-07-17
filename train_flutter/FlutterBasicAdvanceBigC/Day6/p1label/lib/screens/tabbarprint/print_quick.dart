@@ -22,8 +22,10 @@ class PrintQuickScreenState extends State<PrintQuickScreen> {
   bool ckSF = false;
   bool ckBS = true;
 
+  // สร้างตัวแปรรับคีย์ที่กด
   List<LogicalKeyboardKey> keys = [];
 
+  // focusNode จะทำหน้าที่การเคลียค่าหน้าจอในกรณีที่ปิดหน้าจอนี้ไปแล้ว ทำให้ค้างหน้าการ focus เวลาเปิดหน้าอื่นที่รับค่าจาก keyboard เหมือนกันก็จะทำงาน _focusNode จะช่วยแก้ปัญหา
   final FocusNode _focusNode = FocusNode();
   @override
   void dispose() {
@@ -33,6 +35,7 @@ class PrintQuickScreenState extends State<PrintQuickScreen> {
 
   // S = จัดเก็บ
   void saveLabel(){
+    //SnackBar คือ Popup ที่ด้านล่างขอบจอ
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
         duration: Duration(seconds: 2),
@@ -44,6 +47,7 @@ class PrintQuickScreenState extends State<PrintQuickScreen> {
 
   // shift + p = พิมพ์
   void printLabel(){
+    //SnackBar คือ Popup ที่ด้านล่างขอบจอ
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
         duration: Duration(seconds: 2),
@@ -58,11 +62,12 @@ class PrintQuickScreenState extends State<PrintQuickScreen> {
     Navigator.pushNamed(context, '/home');
   }
 
+  // ------------------------------------------------------------------------------------------------------------
   // data product ที่ได้จาก CallAPI
   List products = ['notFound'];
 
   void scanProduct(barcode) async {
-    var data = await CallAPI().readProduct(barcode);
+    var data = await CallAPI().readProduct(barcode); // CallAPI readProduct ส่ง barcode เข้าไป
 
     // filter barcode ที่รับเข้ามา
     var ckBarcode = data.where((map)=>map["barcode"]==barcode).toList();
@@ -81,12 +86,14 @@ class PrintQuickScreenState extends State<PrintQuickScreen> {
     // Call API first
     scanProduct('1111111111111');
   }
+  // ------------------------------------------------------------------------------------------------------------
 
   @override
   Widget build(BuildContext context) {
     return RawKeyboardListener(
       autofocus: true,
-      focusNode: _focusNode, 
+      // focusNode: FocusNode(), // สามารถเลือกใช้ focusNode เป็น Widget ก็ได้
+      focusNode: _focusNode, // focusNode จะทำหน้าที่การเคลียค่าหน้าจอในกรณีที่ปิดหน้าจอนี้ไปแล้ว ทำให้ค้างหน้าการ focus
       onKey: (event){
         // S = จัดเก็บ
         if(event.isKeyPressed(LogicalKeyboardKey.keyS)){
@@ -239,7 +246,7 @@ class PrintQuickScreenState extends State<PrintQuickScreen> {
               maxLength: 13,
               textInputType: TextInputType.number,
               obscureText: false,
-              autofocus: false,
+              autofocus: true,
               size: 6,
               bgColor: white_color,
               borderColor: darker_GrayColor,
@@ -449,12 +456,12 @@ class PrintQuickScreenState extends State<PrintQuickScreen> {
               obscureText: false,
               autofocus: false,
               size: 6,
-              bgColor: btnLogoutColor,
+              bgColor: (productList.isNotEmpty && int.parse(productList[0]['boh'].toString()) > 0) ? inputBgColor : btnLogoutColor,
               borderColor: darker_GrayColor,
               borderWidth: 1,
               borderRadius: 5,
               fontSize: TEXT_SIZE_XSMALL,
-              fontColor: white_color,
+              fontColor: (productList.isNotEmpty && int.parse(productList[0]['boh'].toString()) > 0) ? textColorPrimary : white_color,
             ),
           ),
           const Expanded(

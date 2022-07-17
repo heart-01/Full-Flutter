@@ -1,0 +1,12 @@
+{
+    "title": "หัวเรื่อง",
+    "app_title": "พิมพ์ป้าย P1",
+    "hello": "สวัสดี, คุณสบายดีมั้ย?",
+    "changelang": "เลือกภาษา",
+    "textlabel_branchcode":"กรุณาใส่รหัสสาขา",
+    "error_branchtext":"ป้อนรหัสสาขา 5 หลัก",
+    "error_emptybranch":"ป้อนรหัสสาขาก่อน",
+    "error_branchtextlength":"รหัสสาขาต้องไม่น้อยกว่า 5 ตัวอักษร",
+    "button_branch_submit":"ตกลง",
+    "checkupdate_button": "เช็คอัพเดท"
+}

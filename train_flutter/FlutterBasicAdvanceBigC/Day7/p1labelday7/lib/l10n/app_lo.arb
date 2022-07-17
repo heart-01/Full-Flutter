@@ -1,0 +1,12 @@
+{
+    "title": "ຫົວເລື່ອງ",
+    "hello": "ສະ​ບາຍ​ດີ​, ເຈົ້າ​ສະ​ບາຍ​ດີ​ບໍ່?",
+    "app_title": "ພິມປ້າຍ P1",
+    "changelang": "ເລືອກພາສາ",
+    "textlabel_branchcode":"ກະລຸນາໃສ່ລະຫັດສາຂາ",
+    "error_branchtext":"ລະຫັດປ໊ອດ ສາຂາ 5 ຫລັກ",
+    "error_emptybranch":"ລະຫັດປ໊ອດສາຂາກ່ອນ",
+    "error_branchtextlength":"ລະຫັດສາຂາຕ້ອງຫ້າມ 5 ຈົດໝາຍ",
+    "button_branch_submit":"ຕົກລົງ",
+    "checkupdate_button": "ເຊັກອັບເດດ"
+}
